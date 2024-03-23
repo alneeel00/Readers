@@ -1,0 +1,138 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  padding: 20px;
+}
+
+.gallery-item {
+  overflow: hidden;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 28%;
+  max-height: 100%;
+}
+
+.close {
+  position: absolute;
+  top: 67px;
+  right: 10px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.social-sharing {
+  font-family: Helvetica, Verdana, Arial, sans-serif;
+  font-size: 14px;
+  list-style-type: none;
+  margin: 10px 0 0 10px;
+}
+
+.social-sharing ul {
+  list-style-type: none;
+  display: block;
+}
+
+.social-sharing li {
+  float: left;
+  height: 30px;
+  margin: 0 8px 7px 0;
+}
+
+.social-sharing li a {
+  background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+  color: black;
+  height: 24px;
+  padding-left: 27px;
+  padding-top: 6px;
+  position: relative;
+  text-decoration: none;
+  width: 80px;
+}
+
+.social-sharing li a:hover {
+  background-color: #ccc;
+}
+
+.social-sharing li a i {
+  height: 16px;
+  left: 7px;
+  position: absolute;
+  top: 7px;
+  width: 16px;
+}
+
+.social-sharing li a span {
+  display: block;
+  height: 22px;
+  padding-right: 7px;
+  overflow: hidden;
+  width: 53px;
+}
+
+.social-sharing li a span.site {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+/* Add vendor prefixes for border-radius */
+.social-sharing li a {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+/* Add animation */
+.social-sharing li a i {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
